@@ -1,6 +1,5 @@
-# untitled
+![image](https://github.com/rafaelabou1999/todo-app/assets/120579642/efd8c08e-41ec-4dbc-b1b0-5801bbbd9552)
 
-A new Flutter project.
 
 ## Getting Started
 
