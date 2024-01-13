@@ -95,7 +95,7 @@ class _HomeState extends State<Home> {
               ),
             ),
 
-            ]),
+          ]),
 
           Expanded(
             child: ListView.builder(
@@ -138,6 +138,7 @@ class _HomeState extends State<Home> {
                               ),
                               width:700,
                               height:50,
+<<<<<<< HEAD
                               child: Padding(
                                 padding: EdgeInsets.only(left:20),
                                 child:Align(
@@ -148,22 +149,21 @@ class _HomeState extends State<Home> {
                               )
 
 
+=======
+                              child: Align(
+                                alignment: Alignment.center,
+                                child: Text('${allTask[index]
+                                }', style: TextStyle(fontFamily:'Lato', fontSize: 20, color: Colors.black54, fontWeight: FontWeight.bold)),
+                              ),
+>>>>>>> 6345f8388f1e6b8467376dfc1269e577e4b28f22
                            ),
-                      ),
+                        ),
                       )
-
-                  ]
-
+                    ]
                   );
                 }
-                ),
-          ),
-
-
-
-        ]
-
-
-
-    ));
-}}
+              ),
+            ),
+           ]
+         ));
+        }}
