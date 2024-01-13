@@ -34,11 +34,11 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.blueGrey,
+
         appBar: AppBar(
             title: const Text("To Do App",
                 style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
-            backgroundColor: Colors.black54,
+            backgroundColor: Colors.deepOrange,
             actions: [
               Padding(
                 padding: EdgeInsets.only(right:20),
@@ -80,7 +80,7 @@ class _HomeState extends State<Home> {
                 padding: EdgeInsets.all(12),
                 child: CircleAvatar(
                   foregroundColor: Colors.blueGrey,
-                  backgroundColor: Colors.grey,
+                  backgroundColor: Colors.black,
                   child: IconButton(
 
                       icon: Icon(Icons.add,
@@ -109,7 +109,7 @@ class _HomeState extends State<Home> {
                       ListTile(
                           trailing: Container(
                           decoration: BoxDecoration(
-                            color:Colors.black26
+                            color:Colors.deepOrange
                           ),
                           child: Padding(
                             padding:EdgeInsets.all(1),
@@ -131,18 +131,21 @@ class _HomeState extends State<Home> {
                                color: Colors.white
                                 ,
                                 border: Border.all(
-                                    color: Colors.black12,
-                                    width:3,
+                                    color: Colors.orange,
+                                    width:1,
                                    ),
 
                               ),
                               width:700,
                               height:50,
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: Text('${allTask[index]
-                                }', style: TextStyle(fontFamily:'Lato', fontSize: 20, color: Colors.black54, fontWeight: FontWeight.bold)),
-                              ),
+                              child: Padding(
+                                padding: EdgeInsets.only(left:20),
+                                child:Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text('${allTask[index]
+                                  }', style: TextStyle(fontSize: 20, color: Colors.black)),
+                                ),
+                              )
 
 
                            ),
