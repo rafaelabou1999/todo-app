@@ -1,4 +1,5 @@
 
+![image](https://github.com/rafaelabou1999/todo-app/assets/120579642/e5fec4af-85ac-4fa8-8d85-c0f0ff348a10)
 
 ## Getting Started
 
