@@ -95,7 +95,7 @@ class _HomeState extends State<Home> {
               ),
             ),
 
-            ]),
+          ]),
 
           Expanded(
             child: ListView.builder(
@@ -143,24 +143,14 @@ class _HomeState extends State<Home> {
                                 child: Text('${allTask[index]
                                 }', style: TextStyle(fontFamily:'Lato', fontSize: 20, color: Colors.black54, fontWeight: FontWeight.bold)),
                               ),
-
-
                            ),
-                      ),
+                        ),
                       )
-
-                  ]
-
+                    ]
                   );
                 }
-                ),
-          ),
-
-
-
-        ]
-
-
-
-    ));
-}}
+              ),
+            ),
+           ]
+         ));
+        }}
