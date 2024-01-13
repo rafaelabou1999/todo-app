@@ -34,6 +34,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.blueGrey,
         appBar: AppBar(
             title: const Text("To Do App",
                 style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
@@ -53,6 +54,7 @@ class _HomeState extends State<Home> {
       body: Column(
         children:[
           Stack(
+
             children:[Container(
               child: Padding(
                 padding:EdgeInsets.all(20),
@@ -61,6 +63,8 @@ class _HomeState extends State<Home> {
                   decoration: InputDecoration(
                     labelText: "Enter a task",
                     border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: Colors.white,
                   ),
                 ),
               ),
@@ -69,12 +73,14 @@ class _HomeState extends State<Home> {
             Positioned(
               right:-10,
               top:20,
+
+
               child: Padding(
 
                 padding: EdgeInsets.all(12),
                 child: CircleAvatar(
-                  backgroundColor: Colors.deepPurple,
-
+                  foregroundColor: Colors.blueGrey,
+                  backgroundColor: Colors.grey,
                   child: IconButton(
 
                       icon: Icon(Icons.add,
@@ -82,10 +88,9 @@ class _HomeState extends State<Home> {
                       ),
                       onPressed:(){
                         addTask();
-                      }
-
-
+                      },
                   ),
+
                 ),
               ),
             ),
@@ -102,47 +107,58 @@ class _HomeState extends State<Home> {
                     children: [
 
                       ListTile(
-                        trailing: CircleAvatar(
+                          trailing: Container(
+                          decoration: BoxDecoration(
+                            color:Colors.black26
+                          ),
+                          child: Padding(
+                            padding:EdgeInsets.all(1),
 
-                          backgroundColor: Colors.deepPurple,
-                          child: IconButton(
-                            icon: Icon(Icons.delete,
-                            color: Colors.white, size:20),
-                            onPressed: () {
-                              deleteTask(index);
-                            },
+                            child: IconButton(
+                              icon: Icon(Icons.delete,
+                              color: Colors.white, size:20),
+                              onPressed: () {
+                                deleteTask(index);
+                              },
+                            ),
                           ),
                         ),
                         title: Padding(
-                          padding: EdgeInsets.fromLTRB(7, 2, 2,7),
+                          padding: EdgeInsets.fromLTRB(1, 1, 0,1),
                           child: Container(
 
                               decoration: BoxDecoration(
-                               color: Colors.transparent,
+                               color: Colors.white
+                                ,
                                 border: Border.all(
-                                    color: Colors.deepPurple,
-                                    width:2)
+                                    color: Colors.black12,
+                                    width:3,
+                                   ),
+
                               ),
                               width:700,
                               height:50,
                               child: Align(
                                 alignment: Alignment.center,
                                 child: Text('${allTask[index]
-                                }', style: TextStyle(fontSize: 20, color: Colors.black54, fontWeight: FontWeight.bold)),
+                                }', style: TextStyle(fontFamily:'Lato', fontSize: 20, color: Colors.black54, fontWeight: FontWeight.bold)),
                               ),
 
 
                            ),
                       ),
-                  )
+                      )
 
                   ]
 
                   );
                 }
                 ),
-          )
-      ]
+          ),
+
+
+
+        ]
 
 
 
