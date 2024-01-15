@@ -38,7 +38,7 @@ class _HomeState extends State<Home> {
         appBar: AppBar(
             title: const Text("To Do App",
                 style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
-            backgroundColor: Colors.deepOrange,
+            backgroundColor: Colors.orange[800],
             actions: [
               Padding(
                 padding: EdgeInsets.only(right:20),
@@ -95,7 +95,7 @@ class _HomeState extends State<Home> {
               ),
             ),
 
-          ]),
+            ]),
 
           Expanded(
             child: ListView.builder(
@@ -107,16 +107,18 @@ class _HomeState extends State<Home> {
                     children: [
 
                       ListTile(
+
                           trailing: Container(
                           decoration: BoxDecoration(
-                            color:Colors.deepOrange
+                            color:Colors.grey[350]
+
                           ),
                           child: Padding(
                             padding:EdgeInsets.all(1),
 
                             child: IconButton(
                               icon: Icon(Icons.delete,
-                              color: Colors.white, size:20),
+                              color: Colors.grey[700], size:20),
                               onPressed: () {
                                 deleteTask(index);
                               },
@@ -124,11 +126,12 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         title: Padding(
+
                           padding: EdgeInsets.fromLTRB(1, 1, 0,1),
                           child: Container(
 
                               decoration: BoxDecoration(
-                               color: Colors.white
+                               color: Colors.orange[700]
                                 ,
                                 border: Border.all(
                                     color: Colors.orange,
@@ -138,32 +141,33 @@ class _HomeState extends State<Home> {
                               ),
                               width:700,
                               height:50,
-<<<<<<< HEAD
                               child: Padding(
                                 padding: EdgeInsets.only(left:20),
+
                                 child:Align(
                                   alignment: Alignment.centerLeft,
                                   child: Text('${allTask[index]
-                                  }', style: TextStyle(fontSize: 20, color: Colors.black)),
+                                  }', style: TextStyle(fontSize: 20, color: Colors.white, )),
                                 ),
                               )
 
 
-=======
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: Text('${allTask[index]
-                                }', style: TextStyle(fontFamily:'Lato', fontSize: 20, color: Colors.black54, fontWeight: FontWeight.bold)),
-                              ),
->>>>>>> 6345f8388f1e6b8467376dfc1269e577e4b28f22
                            ),
-                        ),
+                      ),
                       )
-                    ]
+
+                  ]
+
                   );
                 }
-              ),
-            ),
-           ]
-         ));
-        }}
+                ),
+          ),
+
+
+
+        ]
+
+
+
+    ));
+}}
