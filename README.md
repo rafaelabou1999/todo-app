@@ -1,5 +1,7 @@
+<h4>A simple project to practice Flutter 😆 </h2>
 
-![image](https://github.com/rafaelabou1999/todo-app/assets/120579642/7665ab7d-6121-4f2a-b017-9e07ccf26969)
+<img src="video.gif"/>
+
 
 ## Getting Started
 
